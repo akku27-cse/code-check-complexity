@@ -1,7 +1,5 @@
 # Code Check Complexity - VS Code Extension
 
-![Extension Demo](![alt text](image.png))
-
 ## Concept
 
 Code Check Complexity is a lightweight VS Code extension that helps developers maintain code quality by providing real-time visual feedback about code complexity. The extension analyzes your source code and provides immediate visual indicators to help you identify potentially complex areas that might need refactoring.
