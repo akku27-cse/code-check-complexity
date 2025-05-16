@@ -1,8 +1,8 @@
 {
-  "name": "code-check-complexity",
-  "displayName": "Check Code Complexity",
+  "name": "Live--code--complexity--checker",
+  "displayName": "Live Code Complexity Checker",
   "description": "Analyzes code complexity and provides visual feedback through status bar, gutter decorations, and file badges",
-  "version": "1.1.1",
+  "version": "1.1.4",
   "publisher": "santujana",
   "engines": {
     "vscode": "^1.75.0"
