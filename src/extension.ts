@@ -51,27 +51,6 @@ export function activate(context: vscode.ExtensionContext) {
     const decorationProvider = new ComplexityFileDecorationProvider();
     context.subscriptions.push(vscode.window.registerFileDecorationProvider(decorationProvider));
 
-    let lowDecorationType = vscode.window.createTextEditorDecorationType({
-        isWholeLine: true,
-        borderColor: new vscode.ThemeColor('charts.green'),
-        borderStyle: 'solid',
-        borderWidth: '0 0 2px 0'
-    });
-
-    let mediumDecorationType = vscode.window.createTextEditorDecorationType({
-        isWholeLine: true,
-        borderColor: new vscode.ThemeColor('charts.blue'),
-        borderStyle: 'solid',
-        borderWidth: '0 0 2px 0'
-    });
-
-    let highDecorationType = vscode.window.createTextEditorDecorationType({
-        isWholeLine: true,
-        borderColor: new vscode.ThemeColor('charts.red'),
-        borderStyle: 'solid',
-        borderWidth: '0 0 2px 0'
-    });
-
     function analyzeComplexity(text: string): number {
         const matches = text.match(/\b(if|for|while|function|switch|case|catch|try|else if|else)\b/g);
         return matches ? Math.min(matches.length * 10, 100) : 5;
@@ -111,28 +90,6 @@ export function activate(context: vscode.ExtensionContext) {
         }
         
         statusBarItem.show();
-
-        // Update gutter decorations
-        const range = new vscode.Range(
-            new vscode.Position(0, 0),
-            new vscode.Position(editor.document.lineCount - 1, 0)
-        );
-
-        const decorationOptions: vscode.DecorationOptions[] = [{
-            range
-        }];
-
-        editor.setDecorations(lowDecorationType, []);
-        editor.setDecorations(mediumDecorationType, []);
-        editor.setDecorations(highDecorationType, []);
-
-        if (level === 'low') {
-            editor.setDecorations(lowDecorationType, decorationOptions);
-        } else if (level === 'medium') {
-            editor.setDecorations(mediumDecorationType, decorationOptions);
-        } else {
-            editor.setDecorations(highDecorationType, decorationOptions);
-        }
 
         // Update file decoration
         decorationProvider.updateComplexity(editor.document.uri, level, percentage);

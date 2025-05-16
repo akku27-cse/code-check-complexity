@@ -1,5 +1,5 @@
 {
-  "name": "code-check-complexity",
+  "name": "Code-Complexity-Checker",
   "displayName": "Check Code Complexity",
   "description": "Analyzes code complexity and provides visual feedback through status bar, gutter decorations, and file badges",
   "version": "1.0.0",
