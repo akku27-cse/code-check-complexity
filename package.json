@@ -1,19 +1,33 @@
 {
   "name": "code-check-complexity",
-  "displayName": "Code Check Complexity",
-  "description": "Analyzes code complexity and provides visual feedback",
+  "displayName": "Check Code Complexity",
+  "description": "Analyzes code complexity and provides visual feedback through status bar, gutter decorations, and file badges",
   "version": "1.0.0",
+  "publisher": "santujana",
   "engines": {
     "vscode": "^1.75.0"
   },
   "categories": [
-    "Other"
+    "Linters",
+    "Programming Languages"
   ],
+  "keywords": [
+    "complexity",
+    "analysis",
+    "metrics",
+    "code quality",
+    "visualization"
+  ],
+  "icon": "images/logo.png",
+  "galleryBanner": {
+    "color": "#0078D7",
+    "theme": "dark"
+  },
   "activationEvents": [
     "onCommand:codeCheckComplexity.analyze",
     "onStartupFinished"
   ],
-  "main": "./out/src/extension.js",
+  "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
@@ -28,7 +42,9 @@
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package",
+    "publish": "vsce publish"
   },
   "devDependencies": {
     "@types/vscode": "^1.75.0",
@@ -36,6 +52,16 @@
     "eslint": "^8.34.0",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "@typescript-eslint/parser": "^5.53.0",
-    "typescript": "^4.9.5"
-  }
+    "typescript": "^4.9.5",
+    "vsce": "^2.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akku27-cse/code-check-complexity.git"
+  },
+  "bugs": {
+    "url": "https://github.com/akku27-cse/code-check-complexity/issues"
+  },
+  "homepage": "https://github.com/akku27-cse/code-check-complexity#readme",
+  "license": "MIT"
 }
