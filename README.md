@@ -1,6 +1,7 @@
 # Code Check Complexity - VS Code Extension
 
-![Extension Demo](https://via.placeholder.com/800x400?text=Demo+Screenshot+Here)
+![image](https://github.com/user-attachments/assets/b2fa8086-68e3-41b0-abe8-05a75f517289)
+
 
 A VS Code extension that analyzes code complexity and provides visual feedback through status bar indicators, gutter decorations, and file explorer badges.
 
