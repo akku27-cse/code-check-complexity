@@ -1,4 +1,6 @@
 # Code Check Complexity - VS Code Extension
+![VS Code](https://img.shields.io/badge/VS%20Code-Extension-blue)  
+**Real-time code complexity analysis with Cyclomatic and Halstead metrics, refactoring suggestions, and visual feedback right inside Visual Studio Code.**
 
 ![image](https://github.com/user-attachments/assets/b2fa8086-68e3-41b0-abe8-05a75f517289)
 
