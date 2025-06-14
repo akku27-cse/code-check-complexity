@@ -52,6 +52,7 @@ You can manually trigger analysis:
 
 You can customize the extension behavior by adding these settings to your VS Code `settings.json`:
 
+
 ```json
 {
   "codeCheckComplexity.keywords": [
